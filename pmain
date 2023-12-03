@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        char sexo = scanner.next().charAt(0);
+
+        double altura = scanner.nextDouble();
+
+        double pesoIdeal;
+
+        if ((sexo == 'M' || sexo == 'm' || sexo == 'F' || sexo == 'f') && altura >= 0.01 && altura <= 4.0) {
+            if (sexo == 'M' || sexo == 'm') {
+                pesoIdeal = (72.7 * altura) - 58;
+            } else {
+                pesoIdeal = (61.1 * altura) - 58;
+            }
+            System.out.printf("PesoIdeal: %.2f\n", pesoIdeal);
+        } else {
+            System.out.println("Opcao Invalida");
+            
+        }
+}
+}
